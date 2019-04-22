@@ -25,15 +25,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnCapture"
-                    android:text="Capture"
+                    android:text="KAMERA"
                     android:background="@color/colorAccent"
                     android:textColor="@android:color/white"
                     android:textSize="20dp"/>
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btnMessage"
-                    android:text="Message"
+                    android:id="@+id/btnsms"
+                    android:text="SMS"
                     android:layout_marginTop="8dp"
                     android:background="@color/colorAccent"
                     android:textColor="@android:color/white"
@@ -49,17 +49,40 @@
                     android:textSize="20dp"/>
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Masukan Tujuan Anda ex. Universitas PGRI Semarang"
+                      android:hint="Masukan Tujuan Anda"
                       android:id="@+id/tvMaps"/>
             <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btnGNav"
+                    android:id="@+id/btnGmap"
                     android:layout_marginTop="8dp"
                     android:text="Google Maps Navigation"
                     android:background="@color/colorAccent"
                     android:textColor="@android:color/white"
                     android:textSize="20dp"/>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnig"
+                    android:text="Instagram"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/btnig"/>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnyt"
+                    android:text="Youtube"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/btnyt"/>
+
+
+
         </LinearLayout>
     </ScrollView>
 

@@ -44,8 +44,24 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ImplisitIntent::class.java))
         }
 
+        btnPindahBundleIntent.setOnClickListener {
 
+                val intent: Intent = Intent(this, BundleIntent::class.java)
+            intent.putExtra("Nama", "Adytya Kharisma Hartanto")
+            intent.putExtra("Alamat", "Ds.Sumberejo Kec.Jaken Kab.Pati")
+            intent.putExtra("Sekolah", "Universitas PGRI Semarang")
+            intent.putExtra("Pekerjaan", "Bakuler")
+            intent.putExtra("KM" , "Rasa Sakit Menghasilkan Kekuatan")
+            startActivity(intent)
+        }
+        btnkeluar.setOnClickListener   {
+
+                moveTaskToBack(true);
+
+            }
+        }
     }
 
 
-}
+
+

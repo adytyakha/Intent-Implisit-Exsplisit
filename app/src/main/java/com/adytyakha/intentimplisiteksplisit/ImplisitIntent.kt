@@ -6,6 +6,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import kotlinx.android.synthetic.main.activity_implisit_intent.*
 
 class ImplisitIntent : AppCompatActivity() {
@@ -21,35 +22,41 @@ class ImplisitIntent : AppCompatActivity() {
 
         }
 
-        btnMessage.setOnClickListener {
-            messaging()
+        btnsms.setOnClickListener {
+            sms()
         }
         btnPhone.setOnClickListener {
             phone()
         }
 
-        btnGNav.setOnClickListener {
-            mapsNav()
+        btnGmap.setOnClickListener {
+            maps()
+        }
+        btnig.setOnClickListener {
+            ig(it)
+        }
+        btnyt.setOnClickListener {
+            yt(it)
         }
 
     }
 
     // Play Message
-    fun messaging(){
-        val uri = Uri.parse("smsto:081515512144")
+    fun sms(){
+        val uri = Uri.parse("smsto:082322738645")
         val intent = Intent(Intent.ACTION_SENDTO, uri)
-        intent.putExtra("IAV TAMVAN ", "Pokoknya iav itu tamvan, dan iav pengen dia selalu disampingku huhuhuhu")
+        intent.putExtra("Adit ", "Jangan Lupa Bahagia")
         startActivity(intent)
     }
 
     // play Phone
     fun phone(){
-        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "081515512144"))
+        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "082322738645"))
         startActivity(intent)
     }
 
     // play Google Maps Nav
-    fun mapsNav(){
+    fun maps(){
         val intent = Intent(
             android.content.Intent.ACTION_VIEW,
             Uri.parse("google.navigation:q=" + tvMaps.text)
@@ -57,7 +64,21 @@ class ImplisitIntent : AppCompatActivity() {
         startActivity(intent)
     }
 
+    // ig
+    fun ig(view: View) {
+        val url = "https://www.instagram.com/adytya_kha"
+        val igbrowser = Intent(Intent.ACTION_VIEW)
+        igbrowser.data = Uri.parse(url)
+        startActivity(igbrowser)
+    }
 
+    // yt
+    fun yt(view: View) {
+        val url = "https://www.youtube.com"
+        val ytbrowser = Intent(Intent.ACTION_VIEW)
+        ytbrowser.data = Uri.parse(url)
+        startActivity(ytbrowser)
+    }
     // play Camera
     fun dispatchTakePictureIntent() {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->

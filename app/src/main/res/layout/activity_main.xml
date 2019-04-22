@@ -11,17 +11,31 @@
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="pindah activity Implisit"
-            android:textColor="@android:color/holo_red_dark"
+            android:text="activity Implisit"
+            android:textColor="@color/colorAccent"
             android:textSize="20dp"
             android:id="@+id/btnPindahImplisitIntent"/>
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="pindah activity explisit"
-            android:textColor="@android:color/holo_red_dark"
+            android:text="activity explisit"
+            android:textColor="@color/colorAccent"
             android:textSize="20dp"
             android:id="@+id/btnPindahExplisitIntent"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="profil saya"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:id="@+id/btnPindahBundleIntent"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keluar"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:id="@+id/btnkeluar"/>
 
 
 
